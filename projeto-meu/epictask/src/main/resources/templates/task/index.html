@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1>Gastos</h1>
+    <a href="/task/new" class="btn">Cadastrar Novo Gasto</a>
+    <div class="content">
+        <div class="tasks">
+            <div class="card-task"  th:each="task : ${tasks}">
+                    <h2 th:text="${task.name}"></h2>
+                    <p th:text="${task.description}"></p>
+                    <p th:text="'R$'+ ${task.price}"></p>
+            </div>
+        </div>
+    </div>
+
+   <div>
+       <h1>Despesas Totais</h1>
+       <h3>Total Gasto:R$ <span th:text="${totalGasto}"></span></h3>
+   </div>
+
+   <div>
+       <h1>Quantidade de Tarefas por Nome</h1>
+       <div class="lista">
+           <ul>
+               <li th:each="entry : ${quantidadeTarefas}">
+                   <p th:text="${entry.key} + ' Tem: '+ ${entry.value} + ' Contas para pagar'"></p>
+               </li>
+           </ul>
+       </div>
+   </div>
+</body>
+</html>
