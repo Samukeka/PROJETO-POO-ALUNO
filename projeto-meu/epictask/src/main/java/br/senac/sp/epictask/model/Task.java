@@ -8,8 +8,10 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.File;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -25,6 +27,12 @@ public class Task {
     
     @Min(value = 1, message = "Preço não podem ser negativo")
     Integer price;
+
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    LocalDate dateStart;
+
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    LocalDate dateEnd;
 
 
     

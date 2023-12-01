@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root{
-	--dark-color: #1F1F1F;
+	--dark-color: rgb(74, 94, 78);
 	--active-color: #E23221;
 	--primary-font: 'Pridi', serif;
 	--font-color:  rgba(255,255,255,0.8);
@@ -29,6 +29,7 @@ body{
 	margin: 0 20px;	
 }
 
+
 .content{
 	position: relative;
 	display: flex;
@@ -37,7 +38,24 @@ body{
 	align-items: center;
 	margin-top: 20px;
 	padding-bottom: 3rem;
-	
+
+}
+
+input[type="date"] {
+	height: 2rem;
+	padding: 1rem;
+
+	color: var(--font-color);
+	background-color: transparent;
+	border: none;
+	box-shadow: inset -4px -4px 10px rgba(85, 85, 85, 0.25), inset 4px 4px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	margin-bottom: 1.5rem;
+}
+
+/* Estilos específicos para o input date */
+#dateStart, #dateEnd {
+	margin-top: 10px;
 }
 .lista{
 	position: relative;
@@ -45,6 +63,8 @@ body{
 	flex-direction: column;
 	align-items: center;
 	margin-top: 20px;
+
+
 
 	padding-bottom: 60rem;
 
@@ -60,7 +80,8 @@ a:visited{
 }
 
 .yellow, a.yellow { color: #FED851 }
-.red, a.red { color: #BF0059 }
+.red, a.red { color: #ffffff
+}
 .blue { color: #13AFE0 }
 
 nav {
@@ -78,6 +99,7 @@ nav ul{
 nav li {
 	list-style: none;
 	padding: 5px 25px;
+
 }
 
 nav li .active {
@@ -88,6 +110,7 @@ nav li .active {
 				 inset -4px -4px 10px rgba(82, 80, 80, 0.25);
 	border-radius: 40px;
 	padding: 5px 25px;
+
 }
 
 nav li a:hover{
@@ -167,6 +190,7 @@ nav li a:hover{
 form {
 	display: flex;
 	flex-direction: column;
+
 }
 
 form span{
@@ -257,9 +281,25 @@ button.btn{
 	position: relative;
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
-	box-shadow: -4px -4px 10px rgba(85, 85, 85, 0.25), 
-				4px 4px 10px rgba(0, 0, 0, 0.25);
+	box-shadow: -4px -4px 10px rgba(9, 15, 17, 0.66),
+				4px 4px 10px rgba(0, 0, 0, 0.38);
 
+
+}
+.despesas_linha{
+	list-style-type: disc;
+	margin-left: 25px;
+	font-size: 20px;
+}
+.linha{
+	list-style-type: disc;
+	margin-left: 25px;
+	font-size: 20px;
+
+}
+
+.despesas_nome{
+	margin-top: 50px;
 }
 
 .card-task .avatar{
